@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Form</title>
+  
+
+
+  <style>
+  #login
+  {
+    color:white;
+    margin: 0;
+    position: absolute;
+    top: 25%;
+    left: 35%;
+   }
+        #login-help
+  {
+    color:white;
+    margin-top: 20;
+    position: relative;
+    top: 60%;
+    left: 35%;
+  }
+ 
+  </style>
+    </head>
+    <body background="secure.jpg">
+    <div id="login">
+      <h1>Login</h1>
+      <form action="logindb.php" method="post">
+        <p><input type="text" name="us" value="" placeholder="Username"></p>
+        <p><input type="password" name="ps" value="" placeholder="Password"></p>
+           <p>
+            <input type="checkbox" name="remember_me">
+            Remember me on this computer
+          </p>
+        
+          <!--<p><a href="Home Page.html" target="_top"><input type="button" name="commit" value="Login"></a>-->
+<a href="HomePage.html" target="_top"><input type="submit" name="login" value="Login"></a>
+            <a href="form(1).html" target="_top"><input type="button" name="sign" value="Sign up"></a>
+         
+            <a href="form2.html" target="_top"><input type="button" name="sign1" value="sign up as police"></a>
+   
+
+    
+    <div id="login-help">
+      <p>Forgot your password? <a href="">Click here to reset it</a></p>
+    </div>
+ </form>
+        
+</body>
+</html>

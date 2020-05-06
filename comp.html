@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+<title>Complaints</title>
+
+
+<style>
+     body {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    }
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #9cabaf;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 100%;
+     font-weight: bold;
+}
+
+li a:hover {
+    background-color: #111;
+}
+</style>
+    </head>
+<body background="secure.jpg">
+<table border class="10" bordercolor="black" align="center"  cellpadding="5" cellspacing="6" width="100%" height="20%">
+<tr>
+<h1 style="color:white" align="center">CRIME UNCRYPTED</h1>
+
+</tr>
+</table>
+<ul>
+<li><a href="Home Page.html">HOME</a></li>
+<li><a href="News.html">NEWS</a></li>
+<li><a href="wanted.html">VIEW COMPLAINTS</a></li>
+<li><a href="comp.html">COMPLAINTS</a></li>
+<li><a href="about.html">ABOUT US</a></li>
+</ul>
+<div style="float: right"><a href="logout.php">Logout</a></div>
+
+    <h1 align="center"><font color="white">COMPLAINT FORM</font></h1>
+<form action="compdb.php" method="post">
+ <table  border="0"  align="center">
+<tr>
+    <th><font color="#FFE4C4">Username:</font></th>
+<td><input type="text" name="us" title="uName" required="required"></td>
+</tr>
+<tr>
+    <th><font color="#FFE4C4">Subject:</font></th>
+<td><select name="su">
+  <option value="1">Lost</option>
+  <option value="2">Stolen</option>
+  <option value="3">Harassment</option>
+  <option value="4">Other</option>
+ </select></td>
+</tr>
+<tr>
+    <th><font color="#FFE4C4">Crime Description:</font></th>
+<td><textarea name="cd" required="required" rows="10" cols="30">
+</textarea></td></tr>
+<tr>
+    <th><font color="#FFE4C4">Suspect Name:</font></th>
+<td><input type="text" name="sn" title="sName"></td>
+</tr>
+<tr>
+    <th><font color="#FFE4C4">Suspect Description:</font></th>
+<td><textarea name="sd" rows="10" cols="30">
+</textarea></td></tr>
+    <tr>
+        <th><font color="#FFE4C4">Date: </font></th>
+        <td><input type="date" name="da" title="Date" style="color:black" value="" placeholder="dd/mm/yyyy" required="required"></td>
+     </tr>
+<tr>
+    <th><font color="#FFE4C4">Time:</font></th>
+<td><input type="time" name="ti" value="" required="required" placeholder="Hr:min:sec"></td>
+<td><select name="ap">
+  <option value="1">AM</option>
+  <option value="2">PM</option>
+   </select></td>
+</tr>
+
+<tr>
+    <th><font color="#FFE4C4">Mobile no:</font></th>
+<td><input type="number" name="mo" maxlength="10" required="required"></td>
+</tr>
+<tr>
+    <th><font color="#FFE4C4">Email Id:</font></th>
+<td><input type="email" name="em" required="required" ></td>
+</tr>
+
+</table>
+<body>
+<form method="post" action= >
+<input type="submit" value="Submit" /> 
+</form>
+<td><input type="reset" value="Discard">
+</td></tr>
+</body>
+</form>
+</body>
+</html>
+
+

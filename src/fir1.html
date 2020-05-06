@@ -1,0 +1,79 @@
+<html>
+<head>
+    <title>FIR Report</title>
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" rel="stylesheet">
+</head>
+<body>
+<style>
+    #card {
+        margin-top: 110px;
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+
+</style>
+<div class="card border-success mb-3 " id="card">
+
+    <div class="card-body">
+        <form style="margin-left: 20px; margin-top: 20px">
+
+            <label style="font-size: 12px;"><b>Date:</b> </label>
+            <input id="date" name="date" size="20" style="border-width: 0; border: none; font-size: 12px;" type="text"
+                   type="date" value=""/><br>
+
+            <div>
+                <label style="font-size: 12px;"><b>From:</b> </label><br>
+                <input id="person_name" name="person_name" placeholder="Name of the Complainant" required size="50"
+                       style="border-width: 0; border: none; font-size: 12px;" type="text" type="text" value=""/><br>
+                <input id="person_address" name="person_address" placeholder="Full Address" required size="50"
+                       style="border-width: 0; border: none; font-size: 12px;" type="text" type="text" value=""/><br>
+                <input id="person_mobile_no" name="person_mobile_no" placeholder="Mobile_no" size="50"
+                       style="border-width: 0; border: none; font-size: 12px;" type="text" type="tel" value=""/><br>
+                <input id="person_email_id" name="person_email_id" placeholder="email_id (if any)" size="50"
+                       style="border-width: 0; border: none; font-size: 12px;" type="text" type="email" value=""/><br>
+
+            </div>
+
+
+            <div>
+                <label style="font-size: 12px;"><b>To:</b> </label><br>
+                <label style="font-size: 12px;">The Officer Incharge </label><br>
+
+                <input id="police_station_name" name="police_station_name" placeholder="Name of the Police station" required size="50"
+                       style="border-width: 0; border: none; font-size: 12px;" type="text" type="text" value=""/><br>
+
+                <input id="police_station_address" name="police_station_address" placeholder="Address" required size="50"
+                       style="border-width: 0; border: none; font-size: 12px;" type="text" type="text" value=""/><br>
+                <input id="police_station_pin" name="police_station_pin" placeholder="Pin Code" required size="50"
+                       style="border-width: 0; border: none; font-size: 12px;" type="text" type="text" value=""/><br>
+            </div>
+            <br>
+            <label style="font-size: 12px;"><b>Subject:</b> </label>
+            <input id="subject" name="subject" size="80" style="border-width: 0; border: none; font-size: 12px;"
+                   type="text" value=""/><br><br>
+
+            <label style="font-size: 12px;">Dear Sir/Madam, </label><br>
+            <br>
+            <label style="font-size: 12px;">With due Respect i would like to inform you that </label><br>
+            <textarea class="form-control" cols="120" id="inputCity" placeholder=" Your Complain," rows="10" style="font-size: 12px"></textarea>
+            <label style="font-size: 12px;"> I am enclosing here with a copy of my identification and address proofs for
+                verification purposes as may be required. </label><br>
+            <input id="incident" name="incident" size="110"
+                   style="border-width: 0; border: none; font-size: 12px; margin-left: 10px" type="text" value=""/><br>
+            <label style="font-size: 12px;">Kindly do Needfull </label><br>
+            <label style="font-size: 12px;">Thanking you! </label><br>
+            <label style="font-size: 12px;">Yours Truly, </label><br>
+            <input id="applicant_name" name="applicant_name" size="50" style="border-width: 0; border: none; font-size: 12px;"
+                   type="text" value="Applicant Name"/><br>
+            <label style="font-size: 12px;"><i>(Signature)</i></label><br>
+<!--            <label style="font-size: 12px;"><b>(Name of Complainant)</b> </label><br>-->
+            <label style="font-size: 12px;">Enclosures</label><br>
+            <label style="font-size: 12px;">(1)Copy of PAN Card (2)Copy of Aadhar Card </label><br>
+
+
+        </form>
+    </div>
+</div>
+</body>
+</html>
