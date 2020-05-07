@@ -1,123 +1,182 @@
 <!doctype html>
 <html>
+
 <head>
-<title>Complaints</title>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" /> -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+    <link rel="stylesheet" href="complain.css">
+</head>
+<hr>
 
-
-<style>
-     body {
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
-}
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: black;
-    }
-
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    color: #9cabaf;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 100%;
-     font-weight: bold;
-}
-
-li a:hover {
-    background-color: #111;
-}
-</style>
-    </head>
-<body background="secure.jpg">
-<table border class="10" bordercolor="black" align="center"  cellpadding="5" cellspacing="6" width="100%" height="20%">
-<tr>
-<h1 style="color:white" align="center">CRIME UNCRYPTED</h1>
-
-</tr>
-</table>
-<ul>
-<li><a href="HomePage.html">HOME</a></li>
-<li><a href="News.html">NEWS</a></li>
-<li><a href="view.html">VIEW COMPLAINTS</a></li>
-<li><a href="comp.html">COMPLAINTS</a></li>
-<li><a href="about.html">ABOUT US</a></li>
-</ul>
-<div style="float: right"><a href="logout.php">Logout</a></div>
-
-    <h1 align="center"><font color="white">COMPLAINT FORM</font></h1>
-<form action="compdb.php" method="post">
- <table  border="0"  align="center">
-<tr>
-    <th><font color="#FFE4C4">Username:</font></th>
-<td><input type="text" name="us" title="uName" required="required"></td>
-</tr>
-<tr>
-    <th><font color="#FFE4C4">Subject:</font></th>
-<td><select name="su" placeholder="Subject">
-  <option value="1">Lost</option>
-  <option value="2">Stolen</option>
-  <option value="3">Harassment</option>
-  <option value="4">Motor Vehicle Theft</option>
-  <option value="5">Economic and Cyber Offences</option>
-  <option value="6">Missing Person Report</option>
-  <option value="7">Unidentified Child Found</option>
-  <option value="8">Missing Children</option>
-  <option value="10">Other</option>
- </select></td>
-</tr>
-<tr>
-    <th><font color="#FFE4C4">Crime Description:</font></th>
-<td><textarea name="cd" required="required" rows="10" cols="30">
-</textarea></td></tr>
-<tr>
-    <th><font color="#FFE4C4">Suspect Name:</font></th>
-<td><input type="text" name="sn" title="sName"></td>
-</tr>
-<tr>
-    <th><font color="#FFE4C4">Suspect Description:</font></th>
-<td><textarea name="sd" rows="10" cols="30">
-</textarea></td></tr>
-    <tr>
-        <th><font color="#FFE4C4">Date: </font></th>
-        <td><input type="date" name="da" title="Date" style="color:black" value="" placeholder="dd/mm/yyyy" required="required"></td>
-     </tr>
-<tr>
-    <th><font color="#FFE4C4">Time:</font></th>
-<td><input type="time" name="ti" value="" required="required" placeholder="Hr:min:sec"></td>
-<td><select name="ap">
-  <option value="1">AM</option>
-  <option value="2">PM</option>
-   </select></td>
-</tr>
-
-<tr>
-    <th><font color="#FFE4C4">Mobile no. :</font></th>
-<td><input type="number" name="mo" maxlength="10" required="required"></td>
-</tr>
-<tr>
-    <th><font color="#FFE4C4">Email Id:</font></th>
-<td><input type="email" name="em" required="required" ></td>
-</tr>
-
-</table>
 <body>
-<form method="post" action= >
-<input type="submit" value="Submit" /> 
-</form>
-<td><input type="reset" value="Discard">
-</td></tr>
+    <div class="container">
+        <div class="jumbotron" style="background-color: #bdc3c7;">
+
+            <div class="s1">
+                <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #130f40">
+                    <a class="navbar-brand" href="HomePage.html"><img src="src/Untitled-1.png" height="60px"
+                            width="90px"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav navbar-right">
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="comp.html">SignUp</a></li>
+                            <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <h1 align="center" style="font-size: 40px;">SIGN IN FORM</h1>
+                <hr>
+                <p><b>Personal Information</b></p>
+                <form>
+
+                    <div class="form-row">
+
+                        <div class="form-group col-md-6">
+                            <label for="input4first">First Name</label>
+                            <input type="text" class="form-control" id="input4first" placeholder="First Name">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="input4last">Last Name</label>
+                            <input type="text" class="form-control" id="input4last" placeholder="Last Name">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="input4phn">Mobile No.</label>
+                            <input type="number" class="form-control" id="input4phn" placeholder="Mobile No.">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Email</label>
+                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                        </div>
+
+                        <div class="form-group col-md-12">
+                            <label for="gender">Gender</label>
+                            <select id="inputState" class="form-control">
+                                <option selected>Choose...</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Transgender</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="idtype">ID type</label>
+                            <select id="inputState" class="form-control">
+                                <option selected>Choose...</option>
+                                <option>Aadhar Card</option>
+                                <option>Income Tax</option>
+                                <option>Driving License</option>
+                                <option> Passport</option>
+                                <option>Voter Card</option>
+                                <option>Ration Card</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="id">ID No.</label>
+                            <input type="number" class="form-control" id="id" placeholder="Id number">
+                        </div>
+                        <div class="col-md-12">
+                            <label class="control-label" for="date">Date of Birth</label>
+                            <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="date" />
+
+                        </div>
+                        <div class="form-group col-md-12">
+                            <b> Current Address</b></div>
+                        <div class="form-group col-md-6">
+                            <label for="place">Village/Town/City</label>
+
+                            <input type="text" class="form-control" id="inputAddress" placeholder="Indore">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputState">State</label>
+                            <select id="inputState" class="form-control">
+                                <option selected>Choose...</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputDistrict">State</label>
+                            <select id="inputDistrict" class="form-control">
+                                <option selected>Choose...</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputZip">Zip</label>
+                            <input type="text" class="form-control" id="inputZip">
+                        </div>
+                        <div class="form-group col-md-12">
+                            <i> This is your permanent address?</i></div>
+                        <div class="form-group col-md-12">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                    value="option1">
+                                <label class="form-check-label" for="inlineRadio1">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                    value="option2">
+                                <label class="form-check-label" for="inlineRadio2">No</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="securityques">Security Question</label>
+                            <select id="securityques" class="form-control">
+                                <option selected>Choose...</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="securityans">Security Answer</label>
+                            <input type="text" class="form-control" id="securityans">
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="loginId">Generate your login id</label>
+                            <input type="text" class="form-control" id="loginId">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword">Password</label>
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword">Confirm Password</label>
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                        </div>
+
+                        <button type="submit" class="btn btn-success">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
 </body>
-</form>
-</body>
+<script>
+    $(document).ready(function () {
+        var date_input = $('input[name="date"]'); //our date input has the name "date"
+        var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
+        date_input.datepicker({
+            format: 'mm/dd/yyyy',
+            container: container,
+            todayHighlight: true,
+            autoclose: true,
+        })
+    })
+</script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+
 </html>
-
-
