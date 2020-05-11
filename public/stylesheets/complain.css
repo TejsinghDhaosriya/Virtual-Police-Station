@@ -10,7 +10,10 @@
   .jumbotron {
     color: #130f40;
   }
-
+.container{
+    padding-left: 80px;
+    padding-right: 80px;
+}
   .navbar-light .navbar-brand {
     color: white;
   }
@@ -55,7 +58,9 @@
   li a:hover {
     background-color: white;
   }
-
+form::after{
+  opacity: 0.7;
+}
 
 
   .collapse{

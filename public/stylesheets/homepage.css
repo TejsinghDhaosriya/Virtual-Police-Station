@@ -9,14 +9,8 @@
 
   .jumbotron {
     color: #130f40;
-    width: 450px;
-    height: 300px;
   }
-.container{
-    padding-left: 80px;
-    padding-right: 80px;
-    /* height: 50px; */
-}
+
   .navbar-light .navbar-brand {
     color: white;
   }
@@ -26,7 +20,7 @@
     /* color: white; */
   }
   body {
-    background: url(public/map.jpg);
+    background: url(img/map.jpg);
     
     background-size: cover;
     background-position: center;
@@ -58,9 +52,10 @@
 
   }
 
-div.login{
-  margin: 10px 10px 10px 10px;
-}
+  li a:hover {
+    background-color: white;
+  }
+
 
 
   .collapse{
