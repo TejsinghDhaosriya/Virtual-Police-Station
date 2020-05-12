@@ -20,7 +20,7 @@
     /* color: white; */
   }
   body {
-    background: url(img/map.jpg);
+    background: url(/img/map.jpg);
     
     background-size: cover;
     background-position: center;
