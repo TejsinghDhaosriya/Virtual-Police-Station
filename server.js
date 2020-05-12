@@ -7,12 +7,15 @@ var mongoose = require('mongoose');
 var cookieParser = require("cookie-parser");
 const path = require('path');
 
-// requiring routes
-var userRoutes = require("./routes/user");
-var policeRoutes = require("./routes/police");
-var adminRoutes  = require("./routes/admin");
+// <<<<<<< master
+// // requiring routes
+// var userRoutes = require("./routes/user");
+// var policeRoutes = require("./routes/police");
+// var adminRoutes  = require("./routes/admin");
 
 
+// =======
+// >>>>>>> master
 //set port
 var port = process.env.PORT || 8080;
 //parse application/json
