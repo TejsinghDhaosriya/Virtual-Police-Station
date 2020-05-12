@@ -51,16 +51,16 @@ process.on('SIGINT', function(){
  |  |   |   |   |   |   |   |   |   INDEX ROUTE
 *********************************************************************************************************************/
 expobj.get("/",function(req,res) {
-    res.render("index");    
+    res.render("sign_up");    
 });
 
-expobj.use("/user",userRoutes);
-expobj.use("/admin",adminRoutes);
-expobj.use("/police",policeRoutes);
+// expobj.use("/user",userRoutes);
+// expobj.use("/admin",adminRoutes);
+// expobj.use("/police",policeRoutes);
 
 
 //startup our app
-expobj.listen(3000);
+expobj.listen(port);
 //infrom to the user
 console.log('Node server has been started');
 console.log('\nTo check it pen any web browser and type "localhost:'+port+'"');
