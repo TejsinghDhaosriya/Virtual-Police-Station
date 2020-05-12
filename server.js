@@ -7,6 +7,15 @@ var mongoose = require('mongoose');
 var cookieParser = require("cookie-parser");
 const path = require('path');
 
+// <<<<<<< master
+// // requiring routes
+// var userRoutes = require("./routes/user");
+// var policeRoutes = require("./routes/police");
+// var adminRoutes  = require("./routes/admin");
+
+
+// =======
+// >>>>>>> master
 //set port
 var port = process.env.PORT || 8080;
 //parse application/json
@@ -43,12 +52,15 @@ process.on('SIGINT', function(){
 *********************************************************************************************************************/
 expobj.get("/",function(req,res) {
     res.render("index");    
-})
+});
 
+expobj.use("/user",userRoutes);
+expobj.use("/admin",adminRoutes);
+expobj.use("/police",policeRoutes);
 
 
 //startup our app
-expobj.listen(port);
+expobj.listen(3000);
 //infrom to the user
 console.log('Node server has been started');
 console.log('\nTo check it pen any web browser and type "localhost:'+port+'"');
