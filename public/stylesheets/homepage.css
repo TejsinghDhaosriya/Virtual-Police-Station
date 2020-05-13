@@ -8,20 +8,26 @@
   }
 
   .jumbotron {
-    color: #130f40;
+    color: #130f40; 
+    height: 10%; 
+    padding-top: 5px; 
+    padding-bottom:5px; 
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
 
   .navbar-light .navbar-brand {
     color: white;
   }
+  
   .nav-link:hover{
     background-color: white;
     border-radius: 5pt;
     /* color: white; */
   }
+
   body {
     background: url(/img/map.jpg);
-    
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -48,19 +54,16 @@
   hr {
     border-top: 1px solid #f8f8f8;
     border-bottom: 1px solid rgbs(0, 0, 0, 0.2);
-
-
   }
 
   li a:hover {
     background-color: white;
   }
 
-
-
   .collapse{
     color: white;
   }
+
   .s1{
     padding: 0px 110px 0px 110px;
   }

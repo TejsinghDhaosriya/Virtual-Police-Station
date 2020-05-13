@@ -4,9 +4,7 @@
 <head>
   <base href="/">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" src="./stylesheets/homepage.css"  type="text/html">
- 
-
+  <link rel="stylesheet" src="./stylesheets/homepage.css" type="text/html">
 
 </head>
 
@@ -15,22 +13,27 @@
     <div id="first"></div>
     <div class="s1">
       <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #130f40">
-        <a class="navbar-brand" href="/views/index.ejs"><img src="/img/Crimefile_logo.png" height="60px" width="90px">Crime files</a>
+        <a class="navbar-brand" href="/views/index"><img src="/img/Crimefile_logo.png" height="60px" width="90px"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          style="background: white;" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="/views/about.ejs">About<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/views/about">About<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="/views/contact">Contact</a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="/views/sign_up.ejs">Sign Up</a></li>
-            <li class="nav-item"><a class="nav-link" href="/views/login.ejs">Login</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="/views/sign_up">Sign Up</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/user/login">Login</a>
+            </li>
           </ul>
         </div>
       </nav>

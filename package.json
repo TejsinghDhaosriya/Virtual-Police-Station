@@ -15,5 +15,17 @@
     "mongoose": "^5.9.13",
     "multer": "^1.4.2"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "description": "",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mayuri-Birle/Virtual-Police-Station.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mayuri-Birle/Virtual-Police-Station/issues"
+  },
+  "homepage": "https://github.com/Mayuri-Birle/Virtual-Police-Station#readme"
 }

@@ -7,11 +7,13 @@ var mongoose = require('mongoose');
 var cookieParser = require("cookie-parser");
 const path = require('path');
 
+
+
+// expobj.use(require('./routes'));
 // requiring routes
 var userRoutes = require("./routes/user");
 var policeRoutes = require("./routes/police");
 var adminRoutes  = require("./routes/admin");
-
 
 //set port
 var port = process.env.PORT || 8080;
