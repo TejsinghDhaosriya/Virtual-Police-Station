@@ -6,8 +6,7 @@ var methodOverride = require('method-override');
 var mongoose = require('mongoose');
 var cookieParser = require("cookie-parser");
 const path = require('path');
-const accountSid = 'AC98b3daf85cd2aff2aa5df71a41dd4892';
-const authToken = '3aac46c1d79705a805a2bfc2c50094a9';
+
 const client = require('twilio')(accountSid, authToken);
 
 
