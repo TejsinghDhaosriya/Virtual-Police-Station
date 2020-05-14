@@ -50,7 +50,7 @@ process.on('SIGINT', function(){
  |  |   |   |   |   |   |   |   |   INDEX ROUTE
 *********************************************************************************************************************/
 expobj.get("/",function(req,res) {
-    res.render("complaint");    
+    res.render("server");    
 });
 
 expobj.use("/user",userRoutes);
