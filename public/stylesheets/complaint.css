@@ -13,6 +13,7 @@
 .container{
     padding-left: 80px;
     padding-right: 80px;
+    width: 30%;
 }
   .navbar-light .navbar-brand {
     color: white;
@@ -68,4 +69,8 @@ form::after{
   }
   .s1{
     padding: 0px 110px 0px 110px;
+  }
+
+  .container .form .form-group input{
+    width: 30%;
   }
