@@ -7,9 +7,12 @@ var mongoose = require('mongoose');
 var cookieParser = require("cookie-parser");
 const path = require('path');
 /* This code you have to validate */
+var User = require("./models/user_schema")
 const accountSid = '';
 const authToken = '';
-const client = require('twilio')(accountSid, authToken);
+const client = require('twilio')("AC84dbc55d69f62818d0d20b151762b386", "a046f0a95bba385f8bd91f1dd1c6c59e" );
+var jwt             = require("jsonwebtoken");
+var cookieParser    = require("cookie-parser");
 
 client.messages
   .create({
@@ -19,27 +22,15 @@ client.messages
    })
   .then(message => console.log(message.sid));
 
-  function generateOTP()
-  {
-  
+  function generateOTP(){ 
       var digits = '0123456789';
-  
-      var otpLength = 4;
-  
-      var otp = '';
-  
-      for(let i=1; i<=otpLength; i++)
-  
-      {
-  
-          var index = Math.floor(Math.random()*(digits.length));
-  
+      var otpLength = 4;  
+      var otp = ''; 
+      for(let i=1; i<=otpLength; i++){
+          var index = Math.floor(Math.random()*(digits.length)); 
           otp = otp + digits[index];
-  
       }
-  
       return otp;
-  
   }
 /************************************************************* */
 // expobj.use(require('./routes'));
@@ -79,6 +70,20 @@ process.on('SIGINT', function(){
 });
 
 
+// function isLoggedIn(req,res,next){
+//     const token = req.cookies.authToken
+//     if(!token){
+//         res.send("access denied");
+//     }else{
+//         const verified = jwt.verify(token,process.env.TOKEN_SECRET);
+//         console.log(req.user);
+//         if(req.user != verified){
+//             req.user = verified;
+//         }
+//         next()
+//     }
+// }
+
 /*******************************************************************************************************************
  |  |   |   |   |   |   |   |   |   INDEX ROUTE
 *********************************************************************************************************************/
@@ -86,6 +91,58 @@ expobj.get("/",function(req,res) {
     res.render("sign_up");    
 });
 
+expobj.get('/auth',(req,res)=>{
+    res.render("verifyOTP");
+});
+
+expobj.post('/auth',async (req,res)=>{
+    const user = await User.findOne({phoneNo:req.body.phoneNo});
+    console.log(user)
+    if(user.otp == req.body.OTP ){
+        user.verified = true;
+        user.save();
+        res.redirect("/login");
+    }else{
+        res.send("Wrong OTP...")
+    }
+});
+expobj.post("/register",async (req,res)=>{
+    const user = await User.findOne({phoneNo:req.body.phoneNo});
+    if(!user){
+        const otp = generateOTP();
+        console.log(otp)
+        var user1 = new User({username:req.body.username, email:req.body.email, password:req.body.password,phoneNo:req.body.phoneNo,otp:otp+"", verified:false});
+        user1.save();
+        res.redirect("/auth");
+    }else{
+        res.send("Phone No already exist..")
+    }
+});
+expobj.get("/login",(req,res)=>{
+    res.send("plese login...");
+});
+expobj.post("/login", async (req,res)=>{
+    const user = await User.findOne({phoneNo:req.body.phoneNo});
+    if(!user){
+        res.send("Phone No does't exist")
+    }else{
+        
+        if(user.password != req.body.password){
+            res.send("Invalid password")
+        }else{
+            const token = jwt.sign({_id:user._id},process.env.TOKEN_SECRET);
+            res.cookie('authToken',token,{
+                maxAge:2628000000, //1 month in mili sec
+                httpOnly:true
+            });
+            res.redirect("/");
+        }
+    }
+});
+
+// expobj("/secret",isLoggedIn,(req,res)=>{
+//     res.send("secret fjynhbltjfg");
+// })
 expobj.use("/user",userRoutes);
 // expobj.use("/admin",adminRoutes);
 // expobj.use("/police",policeRoutes);
