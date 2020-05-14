@@ -6,22 +6,42 @@ var methodOverride = require('method-override');
 var mongoose = require('mongoose');
 var cookieParser = require("cookie-parser");
 const path = require('path');
-
+/* This code you have to validate */
+const accountSid = '';
+const authToken = '';
 const client = require('twilio')(accountSid, authToken);
-
-
-
 
 client.messages
   .create({
-     body: 'Your Verification Code is ',
-     from: '+12058595935',
+     body: 'Your Verification Code is ' + generateOTP(),
+     from: '+12058800634',
      to: '+919039102681'
    })
   .then(message => console.log(message.sid));
 
-
-
+  function generateOTP()
+  {
+  
+      var digits = '0123456789';
+  
+      var otpLength = 4;
+  
+      var otp = '';
+  
+      for(let i=1; i<=otpLength; i++)
+  
+      {
+  
+          var index = Math.floor(Math.random()*(digits.length));
+  
+          otp = otp + digits[index];
+  
+      }
+  
+      return otp;
+  
+  }
+/************************************************************* */
 // expobj.use(require('./routes'));
 // requiring routes
 var userRoutes = require("./routes/user");
