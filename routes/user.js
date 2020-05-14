@@ -1,10 +1,15 @@
-var express = require("express");
-var router  = express.Router();
 
-// route /user/login
+const express = require("express");
+const router  = express.Router();
+
+
 router.get("/login",function(req,res){
-    res.send("from route /user/login")
+    res.render("login");
 });
 
+router.get("/sign_up", async function(req,res) {
+    console.log('/register');
+    // const emailExist    
+})
 
 module.exports = router;
