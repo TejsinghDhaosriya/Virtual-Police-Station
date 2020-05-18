@@ -1,21 +1,22 @@
 <%- include ('./partials/header') %>
+<link rel="stylesheet" href="./stylesheets/contact.css">
 <h1 align="center" style="font-size: 40px;">SIGN UP FORM</h1>
 <hr>
 <div class="container" style="margin-bottom: 5%;">
     <p><b>
             <h1>Personal Information</h1>
         </b></p>
-    <form>
+    <form action="/sign_up" method="POST">
 
         <div class="form-row">
 
             <div class="form-group col-md-6">
                 <label for="input4first">First Name</label>
-                <input type="text" class="form-control" id="input4first" placeholder="First Name">
+                <input type="text" class="form-control" name="first" id="input4first" placeholder="First Name">
             </div>
             <div class="form-group col-md-6">
                 <label for="input4last">Last Name</label>
-                <input type="text" class="form-control" id="input4last" placeholder="Last Name">
+                <input type="text" class="form-control" name="last" id="input4last" placeholder="Last Name">
             </div>
             <div class="form-group col-md-6">
                 <label for="input4phn">Mobile No.</label>
@@ -23,12 +24,12 @@
             </div>
             <div class="form-group col-md-6">
                 <label for="inputEmail4">Email</label>
-                <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                <input type="email" class="form-control" id="inputEmail4" placeholder="Email" name="email">
             </div>
 
             <div class="form-group col-md-12">
                 <label for="gender">Gender</label>
-                <select id="inputState" class="form-control">
+                <select id="inputState" class="form-control" name="gender">
                     <option selected>Choose...</option>
                     <option>Male</option>
                     <option>Female</option>
@@ -37,7 +38,7 @@
             </div>
             <div class="form-group col-md-6">
                 <label for="idtype">ID type</label>
-                <select id="inputState" class="form-control">
+                <select id="inputState" class="form-control" name="idtype">
                     <option selected>Choose...</option>
                     <option>Aadhar Card</option>
                     <option>Income Tax</option>
@@ -49,7 +50,7 @@
             </div>
             <div class="form-group col-md-6">
                 <label for="id">ID No.</label>
-                <input type="number" class="form-control" id="id" placeholder="Id number">
+                <input type="number" class="form-control" id="id" placeholder="Id number" name="idno">
             </div>
             <div class="col-md-12">
                 <label class="control-label" for="date">Date of Birth</label>
@@ -61,11 +62,11 @@
             <div class="form-group col-md-6">
                 <label for="place">Village/Town/City</label>
 
-                <input type="text" class="form-control" id="inputAddress" placeholder="Indore">
+                <input type="text" class="form-control" id="inputAddress" placeholder="Indore" name="village">
             </div>
             <div class="form-group col-md-6">
                 <label for="inputState">State</label>
-                <select id="inputState" class="form-control">
+                <select id="inputState" class="form-control" name="state">
                     <option selected>Choose...</option>
                     <option value="ap">ANDHRA PRADESH</option>
                     <option value="arp">ARUNACHAL PRADESH</option>
@@ -102,14 +103,14 @@
             </div>
             <div class="form-group col-md-6">
                 <label for="inputDistrict">District</label>
-                <select id="inputDistrict" class="form-control">
+                <select id="inputDistrict" class="form-control" name="district">
                     <option selected>Choose...</option>
                     <option>Indore</option>
                 </select>
             </div>
             <div class="form-group col-md-6">
                 <label for="inputZip">Zip</label>
-                <input type="text" class="form-control" id="inputZip">
+                <input type="text" class="form-control" id="inputZip" name="zip">
             </div>
             <div class="form-group col-md-12">
                 <i> This is your permanent address?</i></div>
@@ -140,22 +141,22 @@
             </div>
             <div class="form-group col-md-12">
                 <label for="loginId">Generate your login id</label>
-                <input type="text" class="form-control" id="loginId">
-                <p style="color: green;">Available </p>
+                <input type="text" class="form-control" id="loginId" name="login">
+            
             </div>
 
             <div class="form-group col-md-6">
                 <label for="inputPassword">Password</label>
-                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="password">
             </div>
-            <div class="form-group col-md-6">
+            <!-- <div class="form-group col-md-6">
                 <label for="inputPassword">Confirm Password</label>
-                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-            </div>
+                <input type="password" class="form-control" id="inputPassword" placeholder="Password">-->
+            <div class="form-group col-md-12">
 
-            <button type="submit" class="btn btn-success" value="Send code">Send Code</button>
-            <button type="submit" class="btn btn-succes" value="submit">Submit</button>
-        </div>
+        
+                <button type= "submit" class="btn btn-success" value="submit">Submit</button>
+            </div> 
     </form>
 </div>
 </div>
