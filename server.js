@@ -46,12 +46,7 @@ process.on('SIGINT', function () {
 /*******************************************************************************************************************
  |  |   |   |   |   |   |   |   |   INDEX ROUTE
 *********************************************************************************************************************/
-app.get("/", function (req, res) {
-    res.render("index");
-});
-app.get('/auth/:id', (req, res) => {
-    res.render("verifyOTP");
-});
+
 
 app.post('/auth', async (req, res) => {
     const user = await User.findOne({
