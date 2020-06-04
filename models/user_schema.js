@@ -50,9 +50,10 @@ var userSchema = new mongoose.Schema({
     Password: {
         type: String,
     },
-    otp:{
+    token:{
         type:String,
-    }
+    },
+    tokenExpirationTime: Date,
 });
 
 
